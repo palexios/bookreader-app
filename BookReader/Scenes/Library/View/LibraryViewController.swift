@@ -4,6 +4,7 @@ import UIKit
 final class LibraryViewController: UIViewController {
     // MARK: - Properties
     
+    
     // MARK: - Input view
     override func loadView() {
         self.view = LibraryInputView()
@@ -17,6 +18,8 @@ final class LibraryViewController: UIViewController {
         
         // setup mock fb2 book to Files on the simulator
         FManager.shared.writeMockFB2Book()
+        
+        print(FManager.shared.getMockFB2BookData())
     }
     
     // MARK: - Private Methods

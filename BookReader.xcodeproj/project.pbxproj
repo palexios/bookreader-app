@@ -63,11 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				FA3F3AEB2D48CA01009384A3 /* AppDelegate.swift */,
-				FA3F3B022D48CCF4009384A3 /* LibraryViewController.swift */,
-				FA10903D2D4ADC1A008F082C /* BookView.swift */,
-				FA3F3B042D48D22F009384A3 /* LibraryInputView.swift */,
-				FA3F3B082D48DADE009384A3 /* XMLParserManager.swift */,
-				FA3F3B0A2D48DB4A009384A3 /* FManager.swift */,
+				FA99853A2D52AA9C00695E42 /* Managers */,
 				FA3F3B002D48CAD6009384A3 /* Scenes */,
 				FA3F3AFF2D48CACC009384A3 /* Resources */,
 			);
@@ -87,6 +83,7 @@
 		FA3F3B002D48CAD6009384A3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FA9985382D52AA7C00695E42 /* Library */,
 				FA3F3B012D48CADE009384A3 /* LaunchScreen */,
 			);
 			path = Scenes;
@@ -98,6 +95,33 @@
 				FA3F3AF62D48CA02009384A3 /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		FA9985382D52AA7C00695E42 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FA9985392D52AA8600695E42 /* View */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		FA9985392D52AA8600695E42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA3F3B022D48CCF4009384A3 /* LibraryViewController.swift */,
+				FA10903D2D4ADC1A008F082C /* BookView.swift */,
+				FA3F3B042D48D22F009384A3 /* LibraryInputView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA99853A2D52AA9C00695E42 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FA3F3B082D48DADE009384A3 /* XMLParserManager.swift */,
+				FA3F3B0A2D48DB4A009384A3 /* FManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
