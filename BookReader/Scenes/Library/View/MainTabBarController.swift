@@ -43,14 +43,12 @@ final class MainTabBarController: UITabBarController {
     // MARK: - Init
     init() {
         super.init(nibName: nil, bundle: nil)
-        
         self.delegate = self
         
         configureTabBar()
         configurePlusButtonLayout()
         configureViewControllers()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -92,9 +90,6 @@ final class MainTabBarController: UITabBarController {
 // MARK: - UITabBarControllerDelegate
 extension MainTabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if let index = self.viewControllers?.firstIndex(of: viewController), index == 1 {
-            return false
-        }
-        return true
+        return self.viewControllers?.firstIndex(of: viewController) != 1
     }
 }
