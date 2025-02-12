@@ -4,6 +4,9 @@ import UIKit
 final class LibraryInputView: UIView {
     // MARK: - Properties
     let trailingInset: CGFloat = -20
+    
+    private let coverImageViewWidthPercent = 0.381679
+    private let coverImageViewHeightPercent = 0.249433
     // MARK: - GUI
     private lazy var sortButton: UIButton = {
         let button = UIButton()
@@ -28,11 +31,22 @@ final class LibraryInputView: UIView {
         
         return searchBar
     }()
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let width = UIScreen.main.bounds.width * self.coverImageViewWidthPercent
+        let height = UIScreen.main.bounds.height * self.coverImageViewHeightPercent
+        layout.itemSize = CGSize.init(width: width, height: height)
+        layout.scrollDirection = .vertical
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: "BookCollectionViewCell")
+        
+        return collectionView
+    }()
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        setupView()
     }
     
     required init?(coder: NSCoder) {
@@ -40,6 +54,10 @@ final class LibraryInputView: UIView {
     }
     
     // MARK: - Methods
+    func setupView() {
+        self.backgroundColor = .white
+    }
+    
     func setupSearchBarLayout() {
         self.addSubview(searchBar)
         NSLayoutConstraint.activate([
@@ -57,8 +75,13 @@ final class LibraryInputView: UIView {
         ])
     }
     
-    // MARK: - Private Methods
-    private func setupView() {
-        self.backgroundColor = .white
+    func setupCollectionViewLayout() {
+        self.addSubview(collectionView)
+        NSLayoutConstraint.activate([
+            collectionView.leadingAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+            collectionView.topAnchor.constraint(equalTo: self.searchBar.bottomAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
     }
 }
