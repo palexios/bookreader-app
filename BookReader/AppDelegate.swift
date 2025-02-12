@@ -13,7 +13,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
+        window?.rootViewController = MainTabBarController()
         window?.makeKeyAndVisible()
         
         return true
