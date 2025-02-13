@@ -3,6 +3,7 @@ import UIKit
 // MARK: - MainTabBarController
 final class MainTabBarController: UITabBarController {
     // MARK: - Properties
+    var libraryViewModel = LibraryViewModel()
     private var plusButtonWidth: CGFloat {
         UIScreen.main.bounds.width * plusButtonProportional
     }
@@ -60,7 +61,7 @@ final class MainTabBarController: UITabBarController {
         self.tabBar.backgroundColor = .white
     }
     private func configureViewControllers() {
-        let libraryVC = LibraryViewController()
+        let libraryVC = LibraryViewController(viewModel: libraryViewModel)
         libraryVC.tabBarItem = UITabBarItem(title: "Моя библиотека", image: UIImage(systemName: "book"), selectedImage: UIImage(systemName: "book")?.withTintColor(.systemBlue))
         
         let emptyVC = UIViewController()
