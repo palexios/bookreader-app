@@ -17,6 +17,8 @@
 		FA3F3B092D48DADE009384A3 /* XMLParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3B082D48DADE009384A3 /* XMLParserManager.swift */; };
 		FA3F3B0B2D48DB4A009384A3 /* FManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3B0A2D48DB4A009384A3 /* FManager.swift */; };
 		FA6BF2C82D5CDCBE00B0A760 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2C72D5CDCBE00B0A760 /* LibraryViewModel.swift */; };
+		FA6BF2CC2D5E01D000B0A760 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2CB2D5E01D000B0A760 /* Book.swift */; };
+		FA6BF2CE2D5E023600B0A760 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2CD2D5E023600B0A760 /* Genre.swift */; };
 		FA99853C2D53763500695E42 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99853B2D53763500695E42 /* MainTabBarController.swift */; };
 		FA99853E2D537F9900695E42 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99853D2D537F9900695E42 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 		FA3F3B082D48DADE009384A3 /* XMLParserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserManager.swift; sourceTree = "<group>"; };
 		FA3F3B0A2D48DB4A009384A3 /* FManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FManager.swift; sourceTree = "<group>"; };
 		FA6BF2C72D5CDCBE00B0A760 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		FA6BF2CB2D5E01D000B0A760 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		FA6BF2CD2D5E023600B0A760 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		FA99853B2D53763500695E42 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FA99853D2D537F9900695E42 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,11 +108,29 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		FA6BF2C92D5E01C100B0A760 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA6BF2C72D5CDCBE00B0A760 /* LibraryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA6BF2CA2D5E01CA00B0A760 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA6BF2CB2D5E01D000B0A760 /* Book.swift */,
+				FA6BF2CD2D5E023600B0A760 /* Genre.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FA9985382D52AA7C00695E42 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				FA6BF2CA2D5E01CA00B0A760 /* Model */,
 				FA9985392D52AA8600695E42 /* View */,
-				FA6BF2C72D5CDCBE00B0A760 /* LibraryViewModel.swift */,
+				FA6BF2C92D5E01C100B0A760 /* ViewModel */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -223,11 +245,13 @@
 				FA3F3B032D48CCF4009384A3 /* LibraryViewController.swift in Sources */,
 				FA3F3AEC2D48CA01009384A3 /* AppDelegate.swift in Sources */,
 				FA3F3B092D48DADE009384A3 /* XMLParserManager.swift in Sources */,
+				FA6BF2CE2D5E023600B0A760 /* Genre.swift in Sources */,
 				FA10903E2D4ADC1A008F082C /* BookCollectionViewCell.swift in Sources */,
 				FA3F3B052D48D22F009384A3 /* LibraryInputView.swift in Sources */,
 				FA3F3B0B2D48DB4A009384A3 /* FManager.swift in Sources */,
 				FA99853C2D53763500695E42 /* MainTabBarController.swift in Sources */,
 				FA6BF2C82D5CDCBE00B0A760 /* LibraryViewModel.swift in Sources */,
+				FA6BF2CC2D5E01D000B0A760 /* Book.swift in Sources */,
 				FA99853E2D537F9900695E42 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
