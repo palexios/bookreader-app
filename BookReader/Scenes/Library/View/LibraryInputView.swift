@@ -78,9 +78,9 @@ final class LibraryInputView: UIView {
     func setupCollectionViewLayout() {
         self.addSubview(collectionView)
         NSLayoutConstraint.activate([
-            collectionView.leadingAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leadingAnchor),
+            collectionView.leadingAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leadingAnchor, constant: 19),
             collectionView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: self.searchBar.bottomAnchor),
+            collectionView.topAnchor.constraint(equalTo: self.searchBar.bottomAnchor, constant: 26),
             collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
