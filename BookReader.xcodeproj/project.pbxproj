@@ -19,6 +19,9 @@
 		FA6BF2C82D5CDCBE00B0A760 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2C72D5CDCBE00B0A760 /* LibraryViewModel.swift */; };
 		FA6BF2CC2D5E01D000B0A760 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2CB2D5E01D000B0A760 /* Book.swift */; };
 		FA6BF2CE2D5E023600B0A760 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2CD2D5E023600B0A760 /* Genre.swift */; };
+		FA6BF2D22D64B74A00B0A760 /* AddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2D12D64B74A00B0A760 /* AddingViewController.swift */; };
+		FA6BF2D42D64B79800B0A760 /* AddingInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2D32D64B79800B0A760 /* AddingInputView.swift */; };
+		FA6BF2D62D64BD5B00B0A760 /* AddingCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2D52D64BD5B00B0A760 /* AddingCoverView.swift */; };
 		FA99853C2D53763500695E42 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99853B2D53763500695E42 /* MainTabBarController.swift */; };
 		FA99853E2D537F9900695E42 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99853D2D537F9900695E42 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,9 @@
 		FA6BF2C72D5CDCBE00B0A760 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		FA6BF2CB2D5E01D000B0A760 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		FA6BF2CD2D5E023600B0A760 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		FA6BF2D12D64B74A00B0A760 /* AddingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingViewController.swift; sourceTree = "<group>"; };
+		FA6BF2D32D64B79800B0A760 /* AddingInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingInputView.swift; sourceTree = "<group>"; };
+		FA6BF2D52D64BD5B00B0A760 /* AddingCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingCoverView.swift; sourceTree = "<group>"; };
 		FA99853B2D53763500695E42 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FA99853D2D537F9900695E42 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +99,7 @@
 		FA3F3B002D48CAD6009384A3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FA6BF2CF2D64B73800B0A760 /* Adding */,
 				FA3F3B012D48CADE009384A3 /* LaunchScreen */,
 				FA9985382D52AA7C00695E42 /* Library */,
 				FA99853F2D539BEF00695E42 /* Settings */,
@@ -123,6 +130,24 @@
 				FA6BF2CD2D5E023600B0A760 /* Genre.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FA6BF2CF2D64B73800B0A760 /* Adding */ = {
+			isa = PBXGroup;
+			children = (
+				FA6BF2D02D64B74100B0A760 /* View */,
+			);
+			path = Adding;
+			sourceTree = "<group>";
+		};
+		FA6BF2D02D64B74100B0A760 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA6BF2D12D64B74A00B0A760 /* AddingViewController.swift */,
+				FA6BF2D32D64B79800B0A760 /* AddingInputView.swift */,
+				FA6BF2D52D64BD5B00B0A760 /* AddingCoverView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FA9985382D52AA7C00695E42 /* Library */ = {
@@ -242,17 +267,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6BF2D42D64B79800B0A760 /* AddingInputView.swift in Sources */,
 				FA3F3B032D48CCF4009384A3 /* LibraryViewController.swift in Sources */,
 				FA3F3AEC2D48CA01009384A3 /* AppDelegate.swift in Sources */,
 				FA3F3B092D48DADE009384A3 /* XMLParserManager.swift in Sources */,
 				FA6BF2CE2D5E023600B0A760 /* Genre.swift in Sources */,
 				FA10903E2D4ADC1A008F082C /* BookCollectionViewCell.swift in Sources */,
 				FA3F3B052D48D22F009384A3 /* LibraryInputView.swift in Sources */,
+				FA6BF2D62D64BD5B00B0A760 /* AddingCoverView.swift in Sources */,
 				FA3F3B0B2D48DB4A009384A3 /* FManager.swift in Sources */,
 				FA99853C2D53763500695E42 /* MainTabBarController.swift in Sources */,
 				FA6BF2C82D5CDCBE00B0A760 /* LibraryViewModel.swift in Sources */,
 				FA6BF2CC2D5E01D000B0A760 /* Book.swift in Sources */,
 				FA99853E2D537F9900695E42 /* SettingsViewController.swift in Sources */,
+				FA6BF2D22D64B74A00B0A760 /* AddingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
