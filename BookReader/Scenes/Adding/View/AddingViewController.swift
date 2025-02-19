@@ -1,8 +1,9 @@
-//
-//  AddingViewController.swift
-//  BookReader
-//
-//  Created by Александр Павлицкий on 18.02.2025.
-//
+import UIKit
 
-import Foundation
+// MARK: - AddingViewController
+final class AddingViewController: UIViewController {
+    // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
