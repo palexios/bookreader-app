@@ -97,9 +97,9 @@
 		FA3F3B002D48CAD6009384A3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				FA6BF2CF2D64B73800B0A760 /* Adding */,
 				FA3F3B012D48CADE009384A3 /* LaunchScreen */,
 				FA9985382D52AA7C00695E42 /* Library */,
+				FA6BF2CF2D64B73800B0A760 /* Adding */,
 				FA99853F2D539BEF00695E42 /* Settings */,
 			);
 			path = Scenes;
