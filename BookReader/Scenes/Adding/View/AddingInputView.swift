@@ -54,6 +54,21 @@ final class AddingInputView: UIView {
         
         return stackView
     }()
+    
+    private lazy var doneButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Добавить", for: .normal)
+        button.setTitleColor(.appGray, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.backgroundColor = .white
+        button.setShadow()
+        button.layer.cornerRadius = 15
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }()
+    
     // MARK: - Init
     init() {
         super.init(frame: .zero)
