@@ -83,7 +83,6 @@ final class MainTabBarController: UITabBarController {
     
     // MARK: - OBJC Methods
     @objc private func plusButtonAction() {
-        // TODO: add tap handler
         self.navigationController?.pushViewController(AddingViewController(), animated: true)
     }
 }
