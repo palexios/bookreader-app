@@ -20,7 +20,7 @@ final class LibraryViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavigationItem()
+        configureNavigationItem()
         
         self.view().collectionView.dataSource = self
         self.view().collectionView.delegate = self
@@ -29,10 +29,6 @@ final class LibraryViewController: UIViewController, UISearchBarDelegate {
         self.view().setupSearchBarLayout()
         self.view().setupSortButtonLayout()
         self.view().setupCollectionViewLayout()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        print(self.view.safeAreaInsets.top)
     }
     
     // MARK: - Init
@@ -47,7 +43,7 @@ final class LibraryViewController: UIViewController, UISearchBarDelegate {
     }
     
     // MARK: - Private Methods
-    private func setupNavigationItem() {
+    private func configureNavigationItem() {
         self.navigationItem.title = "Моя библиотека"
         self.navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.navigationBar.prefersLargeTitles = true
