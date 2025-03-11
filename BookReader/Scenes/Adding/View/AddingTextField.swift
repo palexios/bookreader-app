@@ -28,6 +28,7 @@ final class AddingTextField: UITextField {
         self.tag = tag
         self.setShadow()
         self.textColor = UIColor.black
+        self.font = .systemFont(ofSize: 14)
         
         self.setLeftPadding(12)
         
