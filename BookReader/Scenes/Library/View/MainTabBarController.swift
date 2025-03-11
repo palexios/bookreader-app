@@ -60,6 +60,7 @@ final class MainTabBarController: UITabBarController {
         self.tabBar.layer.borderWidth = 0.33
         self.tabBar.backgroundColor = .white
     }
+    
     private func configureViewControllers() {
         let libraryVC = LibraryViewController(viewModel: libraryViewModel)
         libraryVC.tabBarItem = UITabBarItem(title: "Моя библиотека", image: UIImage(systemName: "book"), selectedImage: UIImage(systemName: "book")?.withTintColor(.systemBlue))
@@ -83,7 +84,8 @@ final class MainTabBarController: UITabBarController {
     
     // MARK: - OBJC Methods
     @objc private func plusButtonAction() {
-        self.navigationController?.pushViewController(AddingViewController(), animated: true)
+        let vc = AddingViewController(viewModel: AddingViewModel())
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
