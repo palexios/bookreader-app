@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+// MARK: - AddingViewModel
+final class AddingViewModel {
+    // MARK: - Properties
+    let genres = Genre.allCases
+}
