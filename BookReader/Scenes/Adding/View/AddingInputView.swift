@@ -2,51 +2,34 @@ import UIKit
 
 // MARK: - AddingInputView
 final class AddingInputView: UIView {
-    // MARK: - Properties
-    private var didSetup = false
-    
     // MARK: - GUI
-    private lazy var addCoverIconView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .appGray.withAlphaComponent(0.15)
-        view.layer.cornerRadius = 15
-        view.translatesAutoresizingMaskIntoConstraints = false
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.backgroundColor = .systemGray6
         
-        let imageConfiguration = UIImage.SymbolConfiguration(pointSize: 30, weight: .regular)
-        let image = UIImage(systemName: "arrow.down.to.line", withConfiguration: imageConfiguration)
-        let imageView = UIImageView(image: image)
-        imageView.tintColor = .appGray
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         
-        view.addSubview(imageView)
+        return scrollView
+    }()
+    
+    private lazy var coverImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.cornerRadius = coverView.layer.cornerRadius
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-        return view
+        
+        return imageView
     }()
     
-    private lazy var addCoverView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.layer.cornerRadius = 15
-        view.setShadow()
-        
+    lazy var coverView: CoverView = {
+        let view = CoverView()
+
         view.translatesAutoresizingMaskIntoConstraints = false
+        
         return view
     }()
     
-    private lazy var addCoverTitleView: UIView = {
-        let label = UILabel()
-        label.text = "Обложка"
-        label.font = UIFont.systemFont(ofSize: 16, weight: .thin)
-        label.textColor = .appGray
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private lazy var stackView: UIStackView = {
+    lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -57,7 +40,7 @@ final class AddingInputView: UIView {
         return stackView
     }()
     
-    private lazy var doneButton: UIButton = {
+    lazy var doneButton: UIButton = {
         let button = UIButton()
         button.setTitle("Добавить", for: .normal)
         button.setTitleColor(.appGray, for: .normal)
@@ -71,8 +54,29 @@ final class AddingInputView: UIView {
         return button
     }()
     
-    private lazy var genreTextField: UITextField = {
-        let textField = getTextField(withPlaceholder: "Жанр", tag: 2)
+    
+    lazy var deleteCoverButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("удалить", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.setTitleColor(.appGray.withAlphaComponent(0.7), for: .normal)
+        button.isHidden = true
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }()
+    
+    lazy var nameTextField: AddingTextField = {
+        AddingTextField(placeholder: "Название")
+    }()
+    
+    lazy var authorTextField: AddingTextField = {
+        AddingTextField(placeholder: "Автор")
+    }()
+    
+    lazy var genreTextField: AddingTextField = {
+        let textField = AddingTextField(placeholder: "Жанр")
         
         let imageConfiguration = UIImage.SymbolConfiguration(pointSize: 18, weight: .regular)
         let image = UIImage(systemName: "arrowtriangle.down.fill", withConfiguration: imageConfiguration)
@@ -85,8 +89,6 @@ final class AddingInputView: UIView {
         let rightView = UIView(frame: .init(x: 0, y: 0, width: image!.size.width + padding, height: image!.size.height))
         rightView.addSubview(button)
         button.center = rightView.center
-        
-        button.addTarget(self, action: #selector(genreButtonAction), for: .touchUpInside)
 
         textField.rightViewMode = .always
         textField.rightView = rightView
@@ -94,35 +96,21 @@ final class AddingInputView: UIView {
         return textField
     }()
     
-    // MARK: - Init
-    init() {
-        super.init(frame: .zero)
-        
-        setupView()
+    // MARK: - Methods
+    func setCover(_ image: UIImage) {
+        self.coverImageView.image = image
+        self.coverView.button.isEnabled = false
+        self.deleteCoverButton.isHidden = false
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        if !didSetup {
-            setupAddCoverView()
-            setupAddCoverIconView()
-            setupAddCoverTitleView()
-            configureTextFieldsStackView()
-            configureDoneButtonLayout()
-            
-            //setupGenreTextFieldRightView()
-            print(genreTextField.rightView!.frame)
-            
-            self.didSetup = true
-        }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func removeCover() {
+        self.coverImageView.image = .none
+        self.coverView.button.isEnabled = true
+        self.deleteCoverButton.isHidden = true
     }
     
     // MARK: - Private Methods
-    private func getTextField(withPlaceholder placeholder: String, tag: Int) -> UITextField {
+    func getTextField(withPlaceholder placeholder: String, tag: Int) -> UITextField {
         let textField = UITextField()
         textField.layer.cornerRadius = 10
         textField.backgroundColor = .white
@@ -144,47 +132,27 @@ final class AddingInputView: UIView {
         
         return textField
     }
-    private func setupView() {
-        self.backgroundColor = .systemGray5
+    
+    func configure() {
+        self.backgroundColor = .white
     }
     
-    private func setupAddCoverView() {
-        let topInset = self.frame.height * 0.21
-        self.addSubview(addCoverView)
+    func configureCoverViewLayout() {
+        let topInset = UIScreen.main.bounds.height * 0.21
+        self.scrollView.addSubview(coverView)
         NSLayoutConstraint.activate([
-            self.addCoverView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.37),
-            self.addCoverView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.25),
-            self.addCoverView.topAnchor.constraint(equalTo: self.topAnchor, constant: topInset),
-            self.addCoverView.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+            coverView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.37),
+            coverView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.25),
+            coverView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            coverView.topAnchor.constraint(equalTo: self.topAnchor, constant: topInset)
         ])
     }
     
-    private func setupAddCoverIconView() {
-        self.addCoverView.addSubview(addCoverIconView)
-        NSLayoutConstraint.activate([
-            addCoverIconView.heightAnchor.constraint(equalTo: self.addCoverView.heightAnchor, multiplier: 0.27),
-            addCoverIconView.widthAnchor.constraint(equalTo: self.addCoverView.widthAnchor, multiplier: 0.4),
-            addCoverIconView.centerXAnchor.constraint(equalTo: self.addCoverView.centerXAnchor),
-            addCoverIconView.centerYAnchor.constraint(equalTo: self.addCoverView.centerYAnchor)
-        ])
-    }
-    
-    private func setupAddCoverTitleView() {
-        self.addCoverView.addSubview(addCoverTitleView)
-        NSLayoutConstraint.activate([
-            addCoverTitleView.topAnchor.constraint(equalTo: self.addCoverIconView.bottomAnchor, constant: 12),
-            addCoverTitleView.centerXAnchor.constraint(equalTo: self.addCoverView.centerXAnchor)
-        ])
-    }
 
-    private func configureTextFieldsStackView() {
-        self.addSubview(stackView)
+    func configureTextFieldsStackView() {
+        self.scrollView.addSubview(stackView)
         
-        let width = self.frame.width * 0.75
-        
-        // setting stackView items
-        let nameTextField = getTextField(withPlaceholder: "Название", tag: 0)
-        let authorTextField = getTextField(withPlaceholder: "Автор", tag: 1)
+        let width = UIScreen.main.bounds.width * 0.75
         
         // constraints for stackView items
         for i in [nameTextField, authorTextField, genreTextField] {
@@ -194,49 +162,56 @@ final class AddingInputView: UIView {
         
         // constraints for stackView
         NSLayoutConstraint.activate([
-            self.stackView.topAnchor.constraint(equalTo: addCoverView.bottomAnchor, constant: 28),
-            self.stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+            self.stackView.topAnchor.constraint(equalTo: deleteCoverButton.bottomAnchor, constant: 6),
+            self.stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
         ])
         
-        self.stackView.addArrangedSubview(nameTextField)
-        self.stackView.addArrangedSubview(authorTextField)
-        self.stackView.addArrangedSubview(genreTextField)
-        
-        print(stackView.arrangedSubviews.count)
+        [nameTextField,authorTextField, genreTextField].forEach { [weak self] i in
+            self?.stackView.addArrangedSubview(i)
+        }
     }
     
-    private func configureDoneButtonLayout() {
-        let height = self.frame.height * 0.05
-        let width = self.frame.width * 0.65
-        let bottomInset = -self.frame.height * 0.07
-        self.addSubview(doneButton)
+    func configureDoneButtonLayout() {
+        let height = UIScreen.main.bounds.height * 0.05
+        let width = UIScreen.main.bounds.width * 0.65
+        let bottomInset = UIScreen.main.bounds.height * 0.15
+        
+        self.scrollView.addSubview(doneButton)
         NSLayoutConstraint.activate([
             doneButton.heightAnchor.constraint(equalToConstant: height),
             doneButton.widthAnchor.constraint(equalToConstant: width),
             doneButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            doneButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: bottomInset),
+            doneButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: bottomInset),
+            doneButton.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor)
             
         ])
     }
     
-    // MARK: - OBJC Private Methods
-    @objc private func genreButtonAction() {
-        print("tapped")
+    func configureDeleteCoverButton() {
+        self.scrollView.addSubview(deleteCoverButton)
+        NSLayoutConstraint.activate([
+            deleteCoverButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            deleteCoverButton.topAnchor.constraint(equalTo: coverView.bottomAnchor, constant: 6)
+        ])
     }
-}
-
-private extension UITextField {
-    func setLeftPadding(_ amount: CGFloat) {
-        let view = UIView(frame: .init(x: 0, y: 0, width: amount, height: self.frame.height))
-        self.leftView = view
-        self.leftViewMode = .always
+    
+    func configureScrollViewLayout() {
+        self.addSubview(scrollView)
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: self.keyboardLayoutGuide.topAnchor)
+        ])
     }
-}
-
-private extension UIView {
-    func setShadow() {
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.2
-        self.layer.shadowOffset = .init(width: 0, height: 5)
+    
+    func configureCoverImageViewLayout() {
+        self.coverView.addSubview(coverImageView)
+        NSLayoutConstraint.activate([
+            coverImageView.leadingAnchor.constraint(equalTo: coverView.leadingAnchor),
+            coverImageView.trailingAnchor.constraint(equalTo: coverView.trailingAnchor),
+            coverImageView.topAnchor.constraint(equalTo: coverView.topAnchor),
+            coverImageView.bottomAnchor.constraint(equalTo: coverView.bottomAnchor)
+        ])
     }
 }
