@@ -13,7 +13,8 @@ final class BookCollectionViewCell: UICollectionViewCell {
     // MARK: - GUI
     private lazy var coverImageView: UIImageView = {
         let imageView = UIImageView()
-        
+        imageView.layer.cornerRadius = 15
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         return imageView
@@ -60,6 +61,8 @@ final class BookCollectionViewCell: UICollectionViewCell {
     private lazy var actionMenuBackgroundView: UIView = {
         let view = UIView()
         view.backgroundColor = .appBookActionMenuBackground.withAlphaComponent(0.95)
+        view.layer.cornerRadius = 15
+        view.clipsToBounds = true
         
         view.translatesAutoresizingMaskIntoConstraints = false
         
@@ -146,7 +149,7 @@ final class BookCollectionViewCell: UICollectionViewCell {
     }
     private func configureCell() {
         self.layer.cornerRadius = 15
-        self.clipsToBounds = true
+        self.setShadow()
     }
     
     private func configureCoverImageViewLayout() {
