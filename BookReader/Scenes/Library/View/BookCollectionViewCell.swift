@@ -147,6 +147,7 @@ final class BookCollectionViewCell: UICollectionViewCell {
         
         return button
     }
+    
     private func configureCell() {
         self.layer.cornerRadius = 15
         self.setShadow()

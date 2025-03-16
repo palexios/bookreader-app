@@ -4,9 +4,9 @@ import UIKit
 final class LibraryInputView: UIView {
     // MARK: - Properties
     let trailingInset: CGFloat = -20
-    
     private let coverImageViewWidthPercent = 0.381679
     private let coverImageViewHeightPercent = 0.249433
+    
     // MARK: - GUI
     private lazy var sortButton: UIButton = {
         let button = UIButton()
@@ -19,6 +19,7 @@ final class LibraryInputView: UIView {
         button.tintColor = .appGray
         return button
     }()
+    
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Поиск"
@@ -31,6 +32,7 @@ final class LibraryInputView: UIView {
         
         return searchBar
     }()
+    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let width = UIScreen.main.bounds.width * self.coverImageViewWidthPercent
@@ -44,6 +46,7 @@ final class LibraryInputView: UIView {
         
         return collectionView
     }()
+    
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)

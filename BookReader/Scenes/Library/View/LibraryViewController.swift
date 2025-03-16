@@ -5,8 +5,6 @@ final class LibraryViewController: UIViewController, UISearchBarDelegate {
     // MARK: - Properties
     var viewModel: LibraryViewModel
     
-    
-    
     // MARK: - Input view
     override func loadView() {
         self.view = LibraryInputView()
@@ -62,8 +60,6 @@ extension LibraryViewController: UICollectionViewDataSource {
         cell.setupUI(cover: cover, status: self.viewModel.mockBooks[indexPath.row].status)
         return cell
     }
-    
-    
 }
 
 
