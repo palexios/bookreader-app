@@ -93,8 +93,6 @@ final class AddingViewController: UIViewController {
         self.contentView.doneButton.addTarget(self, action: #selector(documentPickerViewAddButtonAction), for: .touchUpInside)
     }
     
-    // TODO: add delegate and data source to textFields in inputView
-    
     // MARK: - OBJC Private Methods
     @objc private func coverViewButtonAction() {
         let imagePicker = UIImagePickerController()
