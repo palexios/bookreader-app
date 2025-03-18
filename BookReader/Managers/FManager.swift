@@ -21,9 +21,11 @@ final class FManager {
         }
         return nil
     }
+    
     func getMockFB2BookPath() -> String {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path().appending("book.fb2")
     }
+    
     func getMockFB2BookBundlePath() -> String? {
         Bundle.main.path(forResource: "book", ofType: "fb2")
     }
@@ -32,5 +34,4 @@ final class FManager {
         let destinationURL = self.documentsPath.appending("book.fb2")
         try? FileManager.default.copyItem(atPath: self.getMockFB2BookPath(), toPath: destinationURL)
     }
-    
 }
