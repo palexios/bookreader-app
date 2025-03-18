@@ -83,7 +83,6 @@ final class AddingInputView: UIView {
         let button = UIButton(frame: .init(origin: .zero, size: image!.size))
         button.setImage(image, for: .normal)
         button.tintColor = .appGray
-
         
         let padding: CGFloat = 16
         let rightView = UIView(frame: .init(x: 0, y: 0, width: image!.size.width + padding, height: image!.size.height))
@@ -183,7 +182,6 @@ final class AddingInputView: UIView {
             doneButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             doneButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: bottomInset),
             doneButton.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor)
-            
         ])
     }
     
