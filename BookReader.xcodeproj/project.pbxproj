@@ -17,7 +17,6 @@
 		FA3F3B032D48CCF4009384A3 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3B022D48CCF4009384A3 /* LibraryViewController.swift */; };
 		FA3F3B052D48D22F009384A3 /* LibraryInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3B042D48D22F009384A3 /* LibraryInputView.swift */; };
 		FA3F3B072D48DAC9009384A3 /* book.fb2 in Resources */ = {isa = PBXBuildFile; fileRef = FA3F3B062D48DAC9009384A3 /* book.fb2 */; };
-		FA3F3B092D48DADE009384A3 /* XMLParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3B082D48DADE009384A3 /* XMLParserManager.swift */; };
 		FA3F3B0B2D48DB4A009384A3 /* FManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3B0A2D48DB4A009384A3 /* FManager.swift */; };
 		FA6BB7392D7E2D5D0082B915 /* AddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BB7382D7E2D5D0082B915 /* AddingTextField.swift */; };
 		FA6BF2C82D5CDCBE00B0A760 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2C72D5CDCBE00B0A760 /* LibraryViewModel.swift */; };
@@ -43,7 +42,6 @@
 		FA3F3B022D48CCF4009384A3 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		FA3F3B042D48D22F009384A3 /* LibraryInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInputView.swift; sourceTree = "<group>"; };
 		FA3F3B062D48DAC9009384A3 /* book.fb2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = book.fb2; sourceTree = "<group>"; };
-		FA3F3B082D48DADE009384A3 /* XMLParserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserManager.swift; sourceTree = "<group>"; };
 		FA3F3B0A2D48DB4A009384A3 /* FManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FManager.swift; sourceTree = "<group>"; };
 		FA6BB7382D7E2D5D0082B915 /* AddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingTextField.swift; sourceTree = "<group>"; };
 		FA6BF2C72D5CDCBE00B0A760 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 		FA99853A2D52AA9C00695E42 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				FA3F3B082D48DADE009384A3 /* XMLParserManager.swift */,
 				FA3F3B0A2D48DB4A009384A3 /* FManager.swift */,
 			);
 			path = Managers;
@@ -293,7 +290,6 @@
 				FA725AC02D7F589E00FABCB7 /* AddingViewModel.swift in Sources */,
 				FA2737902D7889BA0020FFB2 /* UITextField+Ext.swift in Sources */,
 				FA3F3AEC2D48CA01009384A3 /* AppDelegate.swift in Sources */,
-				FA3F3B092D48DADE009384A3 /* XMLParserManager.swift in Sources */,
 				FA6BF2CE2D5E023600B0A760 /* Genre.swift in Sources */,
 				FA10903E2D4ADC1A008F082C /* BookCollectionViewCell.swift in Sources */,
 				FA3F3B052D48D22F009384A3 /* LibraryInputView.swift in Sources */,
