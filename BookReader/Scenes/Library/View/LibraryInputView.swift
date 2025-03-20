@@ -50,6 +50,8 @@ final class LibraryInputView: UIView {
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {
@@ -57,9 +59,6 @@ final class LibraryInputView: UIView {
     }
     
     // MARK: - Methods
-    func setupView() {
-        self.backgroundColor = .white
-    }
     
     func setupSearchBarLayout() {
         self.addSubview(searchBar)
