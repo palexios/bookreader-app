@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA009BA42D8F1C2E005F02ED /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA009BA22D8F1C2E005F02ED /* Model.xcdatamodeld */; };
 		FA10903E2D4ADC1A008F082C /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10903D2D4ADC1A008F082C /* BookCollectionViewCell.swift */; };
+		FA10AEC82DB2625E00131E43 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10AEC42DB2625E00131E43 /* Book+CoreDataClass.swift */; };
+		FA10AEC92DB2625E00131E43 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10AEC52DB2625E00131E43 /* Book+CoreDataProperties.swift */; };
+		FA10AECA2DB2625E00131E43 /* Quote+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10AEC62DB2625E00131E43 /* Quote+CoreDataClass.swift */; };
+		FA10AECB2DB2625E00131E43 /* Quote+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10AEC72DB2625E00131E43 /* Quote+CoreDataProperties.swift */; };
 		FA27378C2D7885A10020FFB2 /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27378B2D7885A10020FFB2 /* CoverView.swift */; };
 		FA27378E2D7887440020FFB2 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27378D2D7887440020FFB2 /* UIView+Ext.swift */; };
 		FA2737902D7889BA0020FFB2 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27378F2D7889BA0020FFB2 /* UITextField+Ext.swift */; };
@@ -15,22 +20,31 @@
 		FA3F3AF52D48CA02009384A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3F3AF42D48CA02009384A3 /* Assets.xcassets */; };
 		FA3F3AF82D48CA02009384A3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FA3F3AF72D48CA02009384A3 /* Base */; };
 		FA3F3B032D48CCF4009384A3 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3B022D48CCF4009384A3 /* LibraryViewController.swift */; };
-		FA3F3B052D48D22F009384A3 /* LibraryInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3B042D48D22F009384A3 /* LibraryInputView.swift */; };
 		FA3F3B072D48DAC9009384A3 /* book.fb2 in Resources */ = {isa = PBXBuildFile; fileRef = FA3F3B062D48DAC9009384A3 /* book.fb2 */; };
 		FA3F3B0B2D48DB4A009384A3 /* FManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3B0A2D48DB4A009384A3 /* FManager.swift */; };
+		FA5364932D9C9B9700BD6001 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5364922D9C9B9700BD6001 /* Resources.swift */; };
+		FA53649A2D9CA69B00BD6001 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5364992D9CA69B00BD6001 /* Design.swift */; };
 		FA6BB7392D7E2D5D0082B915 /* AddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BB7382D7E2D5D0082B915 /* AddingTextField.swift */; };
 		FA6BF2C82D5CDCBE00B0A760 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2C72D5CDCBE00B0A760 /* LibraryViewModel.swift */; };
-		FA6BF2CC2D5E01D000B0A760 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2CB2D5E01D000B0A760 /* Book.swift */; };
+		FA6BF2CC2D5E01D000B0A760 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2CB2D5E01D000B0A760 /* BookModel.swift */; };
 		FA6BF2CE2D5E023600B0A760 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2CD2D5E023600B0A760 /* Genre.swift */; };
 		FA6BF2D22D64B74A00B0A760 /* AddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2D12D64B74A00B0A760 /* AddingViewController.swift */; };
 		FA6BF2D42D64B79800B0A760 /* AddingInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BF2D32D64B79800B0A760 /* AddingInputView.swift */; };
 		FA725AC02D7F589E00FABCB7 /* AddingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA725ABF2D7F589E00FABCB7 /* AddingViewModel.swift */; };
+		FA8493852DB2F66A00B7824E /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8493842DB2F66A00B7824E /* PlusButton.swift */; };
+		FA8493872DB2FFC600B7824E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8493862DB2FFC600B7824E /* Tab.swift */; };
 		FA99853C2D53763500695E42 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99853B2D53763500695E42 /* MainTabBarController.swift */; };
 		FA99853E2D537F9900695E42 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99853D2D537F9900695E42 /* SettingsViewController.swift */; };
+		FAF437042D8EC87100198492 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF437032D8EC87100198492 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA009BA32D8F1C2E005F02ED /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FA10903D2D4ADC1A008F082C /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA10AEC42DB2625E00131E43 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA10AEC52DB2625E00131E43 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA10AEC62DB2625E00131E43 /* Quote+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quote+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA10AEC72DB2625E00131E43 /* Quote+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quote+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FA27378B2D7885A10020FFB2 /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
 		FA27378D2D7887440020FFB2 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		FA27378F2D7889BA0020FFB2 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
@@ -40,18 +54,22 @@
 		FA3F3AF72D48CA02009384A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA3F3AF92D48CA02009384A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3F3B022D48CCF4009384A3 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
-		FA3F3B042D48D22F009384A3 /* LibraryInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInputView.swift; sourceTree = "<group>"; };
 		FA3F3B062D48DAC9009384A3 /* book.fb2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = book.fb2; sourceTree = "<group>"; };
 		FA3F3B0A2D48DB4A009384A3 /* FManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FManager.swift; sourceTree = "<group>"; };
+		FA5364922D9C9B9700BD6001 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		FA5364992D9CA69B00BD6001 /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 		FA6BB7382D7E2D5D0082B915 /* AddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingTextField.swift; sourceTree = "<group>"; };
 		FA6BF2C72D5CDCBE00B0A760 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
-		FA6BF2CB2D5E01D000B0A760 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		FA6BF2CB2D5E01D000B0A760 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		FA6BF2CD2D5E023600B0A760 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		FA6BF2D12D64B74A00B0A760 /* AddingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingViewController.swift; sourceTree = "<group>"; };
 		FA6BF2D32D64B79800B0A760 /* AddingInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingInputView.swift; sourceTree = "<group>"; };
 		FA725ABF2D7F589E00FABCB7 /* AddingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingViewModel.swift; sourceTree = "<group>"; };
+		FA8493842DB2F66A00B7824E /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
+		FA8493862DB2FFC600B7824E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		FA99853B2D53763500695E42 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FA99853D2D537F9900695E42 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FAF437032D8EC87100198492 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,29 +102,36 @@
 		FA3F3AEA2D48CA01009384A3 /* BookReader */ = {
 			isa = PBXGroup;
 			children = (
-				FA3F3AEB2D48CA01009384A3 /* AppDelegate.swift */,
+				FA10AEC42DB2625E00131E43 /* Book+CoreDataClass.swift */,
+				FA10AEC52DB2625E00131E43 /* Book+CoreDataProperties.swift */,
+				FA10AEC62DB2625E00131E43 /* Quote+CoreDataClass.swift */,
+				FA10AEC72DB2625E00131E43 /* Quote+CoreDataProperties.swift */,
+				FA009BA22D8F1C2E005F02ED /* Model.xcdatamodeld */,
+				FA5364962D9C9C1700BD6001 /* LifeCycle */,
+				FA5364942D9C9B9900BD6001 /* Helpers */,
 				FA99853A2D52AA9C00695E42 /* Managers */,
 				FA3F3B002D48CAD6009384A3 /* Scenes */,
-				FA3F3AFF2D48CACC009384A3 /* Resources */,
-				FA27378D2D7887440020FFB2 /* UIView+Ext.swift */,
-				FA27378F2D7889BA0020FFB2 /* UITextField+Ext.swift */,
+				FA3F3AFF2D48CACC009384A3 /* SupportingFiles */,
 			);
 			path = BookReader;
 			sourceTree = "<group>";
 		};
-		FA3F3AFF2D48CACC009384A3 /* Resources */ = {
+		FA3F3AFF2D48CACC009384A3 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				FA3F3AF42D48CA02009384A3 /* Assets.xcassets */,
 				FA3F3AF92D48CA02009384A3 /* Info.plist */,
 				FA3F3B062D48DAC9009384A3 /* book.fb2 */,
 			);
-			path = Resources;
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		FA3F3B002D48CAD6009384A3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FA8493842DB2F66A00B7824E /* PlusButton.swift */,
+				FA8493862DB2FFC600B7824E /* Tab.swift */,
+				FA99853B2D53763500695E42 /* MainTabBarController.swift */,
 				FA3F3B012D48CADE009384A3 /* LaunchScreen */,
 				FA9985382D52AA7C00695E42 /* Library */,
 				FA6BF2CF2D64B73800B0A760 /* Adding */,
@@ -123,6 +148,33 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		FA5364942D9C9B9900BD6001 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA5364952D9C9BF200BD6001 /* Extentions */,
+				FA5364922D9C9B9700BD6001 /* Resources.swift */,
+				FA5364992D9CA69B00BD6001 /* Design.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA5364952D9C9BF200BD6001 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				FA27378D2D7887440020FFB2 /* UIView+Ext.swift */,
+				FA27378F2D7889BA0020FFB2 /* UITextField+Ext.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		FA5364962D9C9C1700BD6001 /* LifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				FA3F3AEB2D48CA01009384A3 /* AppDelegate.swift */,
+			);
+			path = LifeCycle;
+			sourceTree = "<group>";
+		};
 		FA6BF2C92D5E01C100B0A760 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +186,7 @@
 		FA6BF2CA2D5E01CA00B0A760 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FA6BF2CB2D5E01D000B0A760 /* Book.swift */,
+				FA6BF2CB2D5E01D000B0A760 /* BookModel.swift */,
 				FA6BF2CD2D5E023600B0A760 /* Genre.swift */,
 			);
 			path = Model;
@@ -183,8 +235,6 @@
 			children = (
 				FA3F3B022D48CCF4009384A3 /* LibraryViewController.swift */,
 				FA10903D2D4ADC1A008F082C /* BookCollectionViewCell.swift */,
-				FA3F3B042D48D22F009384A3 /* LibraryInputView.swift */,
-				FA99853B2D53763500695E42 /* MainTabBarController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				FA3F3B0A2D48DB4A009384A3 /* FManager.swift */,
+				FAF437032D8EC87100198492 /* CoreDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -290,14 +341,23 @@
 				FA725AC02D7F589E00FABCB7 /* AddingViewModel.swift in Sources */,
 				FA2737902D7889BA0020FFB2 /* UITextField+Ext.swift in Sources */,
 				FA3F3AEC2D48CA01009384A3 /* AppDelegate.swift in Sources */,
+				FAF437042D8EC87100198492 /* CoreDataManager.swift in Sources */,
+				FA8493872DB2FFC600B7824E /* Tab.swift in Sources */,
 				FA6BF2CE2D5E023600B0A760 /* Genre.swift in Sources */,
+				FA10AEC82DB2625E00131E43 /* Book+CoreDataClass.swift in Sources */,
+				FA10AEC92DB2625E00131E43 /* Book+CoreDataProperties.swift in Sources */,
+				FA10AECA2DB2625E00131E43 /* Quote+CoreDataClass.swift in Sources */,
+				FA10AECB2DB2625E00131E43 /* Quote+CoreDataProperties.swift in Sources */,
 				FA10903E2D4ADC1A008F082C /* BookCollectionViewCell.swift in Sources */,
-				FA3F3B052D48D22F009384A3 /* LibraryInputView.swift in Sources */,
+				FA8493852DB2F66A00B7824E /* PlusButton.swift in Sources */,
 				FA3F3B0B2D48DB4A009384A3 /* FManager.swift in Sources */,
 				FA99853C2D53763500695E42 /* MainTabBarController.swift in Sources */,
 				FA6BF2C82D5CDCBE00B0A760 /* LibraryViewModel.swift in Sources */,
+				FA5364932D9C9B9700BD6001 /* Resources.swift in Sources */,
 				FA6BB7392D7E2D5D0082B915 /* AddingTextField.swift in Sources */,
-				FA6BF2CC2D5E01D000B0A760 /* Book.swift in Sources */,
+				FA53649A2D9CA69B00BD6001 /* Design.swift in Sources */,
+				FA6BF2CC2D5E01D000B0A760 /* BookModel.swift in Sources */,
+				FA009BA42D8F1C2E005F02ED /* Model.xcdatamodeld in Sources */,
 				FA99853E2D537F9900695E42 /* SettingsViewController.swift in Sources */,
 				FA6BF2D22D64B74A00B0A760 /* AddingViewController.swift in Sources */,
 				FA27378C2D7885A10020FFB2 /* CoverView.swift in Sources */,
@@ -445,7 +505,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BookReader/Resources/Info.plist;
+				INFOPLIST_FILE = BookReader/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -476,7 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BookReader/Resources/Info.plist;
+				INFOPLIST_FILE = BookReader/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -521,6 +581,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA009BA22D8F1C2E005F02ED /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA009BA32D8F1C2E005F02ED /* Model.xcdatamodel */,
+			);
+			currentVersion = FA009BA32D8F1C2E005F02ED /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = "/Users/alex/Documents/Projects GitHub/BookReader/BookReader/Model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA3F3AE02D48CA01009384A3 /* Project object */;
 }
